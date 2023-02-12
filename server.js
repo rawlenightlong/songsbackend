@@ -29,7 +29,7 @@ app.get('/test', (req, res) => {
 })
 
 app.use("/auth", authRouter)
-app.use('/song', songRouter)
+app.use('/songs', songRouter)
 
 // app listener
 app.listen(PORT, () => {
