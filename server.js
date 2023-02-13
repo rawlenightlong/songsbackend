@@ -16,7 +16,7 @@ const app = express()
 // register middleware
 app.use(cors({
     origin: "*",
-    credentials: true
+
 })) // allows external requests
 app.use(morgan("dev")) // logging in console
 app.use(express.json()) // parse json bodies
