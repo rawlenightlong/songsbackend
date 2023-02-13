@@ -15,12 +15,8 @@ const app = express()
 
 // register middleware
 app.use(cors({
-    origin: "http://songsbackend.herokuapp.com",
+    origin: "http://localhost:3000",
     credentials: true
-}, {
-    origin: "http://songsbackend.onrender.com",
-    credentials: true
-    
 })) // allows external requests
 app.use(morgan("dev")) // logging in console
 app.use(express.json()) // parse json bodies
