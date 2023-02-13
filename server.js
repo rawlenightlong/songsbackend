@@ -14,7 +14,14 @@ const PORT = process.env.PORT
 const app = express()
 
 // register middleware
-app.use(cors()) // allows external requests
+app.use(cors({
+    origin: "http://songsbackend.herokuapp.com",
+    credentials: true
+}, {
+    origin: "http://songsbackend.onrender.com",
+    credentials: true
+    
+})) // allows external requests
 app.use(morgan("dev")) // logging in console
 app.use(express.json()) // parse json bodies
 app.use(cookieParser())
