@@ -50,7 +50,7 @@ router.post("/login", async (req, res) => {
             const token = await jwt.sign(payload, SECRET)
 
             // send response
-            res.cookie("token", token, {httpOnly: true, path: '/', secure: req.hostname === "localhost" ? false : true,}).json({payload, status: "logged in"})
+            res.cookie("token", token, {httpOnly: true, path: '/', secure: req.hostname === "localhost" ? false : true, sameSite: "None"}).json({payload, status: "logged in"})
         } else {
             res.status(400).json({error: "The password is incorrect"})
         }
