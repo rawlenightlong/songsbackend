@@ -15,7 +15,7 @@ const app = express()
 
 // register middleware
 app.use(cors({
-    origin: "http://10.0.0.143:3000",
+    origin: "http://localhost:3000",
     credentials: true
 })) // allows external requests
 app.use(morgan("dev")) // logging in console
